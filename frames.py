@@ -20,12 +20,14 @@ class VideoProcessor:
                 frame_path = os.path.join(self.outputDir, f"frame_{frame_count}.jpg")
                 cv2.imwrite(frame_path, frame)
             frame_count += 1
-
+        print("\033[94m" + f"Total frames extracted: {frame_count}" + "\033[0m")
         video.release()
 
 
 if __name__ == "__main__":
-    videoPath, outputDir, frameInterval = "vid.mp4", "./frames", 150
+    videoPath, outputDir, frameInterval = "vid.mp4", "./frames", 60
     processor = VideoProcessor(videoPath, outputDir, frameInterval)
     processor.process_video()
-    print("Frames extracted, and saved in ./frames successfully!")
+    print(
+        "\033[92m" + "Frames extracted, and saved in ./frames successfully!" + "\033[0m"
+    )
