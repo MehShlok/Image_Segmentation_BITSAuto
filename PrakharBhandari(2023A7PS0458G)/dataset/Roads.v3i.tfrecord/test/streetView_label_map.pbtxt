@@ -1,0 +1,15 @@
+item {
+    name: "footpath",
+    id: 1,
+    display_name: "footpath"
+}
+item {
+    name: "obstacle",
+    id: 2,
+    display_name: "obstacle"
+}
+item {
+    name: "road",
+    id: 3,
+    display_name: "road"
+}
