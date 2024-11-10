@@ -1,0 +1,22 @@
+import cv2
+i = 0
+for s in range(1, 20):
+    n = 0  
+    cam = cv2.VideoCapture(r"C:\Users\abbas\Desktop\2-1\OOPS\Auto\vids\vid"+str(s)+".mp4")
+    fps = 120
+    
+    while True:
+        ret, frame = cam.read()
+        if not ret:
+            break  
+        
+
+        if (n) %(fps) == 0:
+            cv2.imwrite(r"C:\Users\abbas\Desktop\2-1\OOPS\Auto\frames\{}.jpg".format(i), frame)
+            i += 1
+            print(i)
+        
+        n += 1  
+    
+    cam.release()
+    cv2.destroyAllWindows()
