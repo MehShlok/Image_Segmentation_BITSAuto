@@ -1,0 +1,5 @@
+I tried unet architecture trained specifically on lane detection but this wasn't accurate for our dataset , the primary reason being that the training dataset included a lot of lane marked roads which isn't the case in our dataset which led to inaccurate results. 
+Lane markings can significantly increase the accuracy of the model .
+Then i tried another architecture lanenet which gave better results than the unet architecture
+. This performed better than the previous model. 
+In conclusion the second model doesn't yet achieve its maximum accuracy either , it can be fine tuned more accurate results. While  adding lane markings can/ clear footpaths assists the model in accurately predicting the boundary and the curves of the road.
